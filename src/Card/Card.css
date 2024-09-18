@@ -1,0 +1,9 @@
+.card {
+    background-color: rgb(46, 42, 42);
+    border-radius: 0.5em;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.4rem;
+}
