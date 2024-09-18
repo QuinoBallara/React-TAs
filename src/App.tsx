@@ -1,11 +1,12 @@
 import './App.css'
+import Counter from './Counter/Counter'
 
 function App() {
 
   return (
-    <>
-      <p>hello world</p>
-    </>
+    <div>
+      <Counter />
+    </div>
   )
 }
 
