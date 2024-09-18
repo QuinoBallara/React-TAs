@@ -5,9 +5,27 @@ function App() {
 
   return (
     <div className='container'>
-      <Card title="Task 1" description="Do something" assignedTo="John Doe" startDate="2021-10-01" dueDate="2021-10-15" />
-      <Card title="Task 2" description="Do something else" assignedTo="Jane Doe" startDate="2021-10-16" dueDate="2021-10" />
-      <Card title="Task 3" description="Do something else" assignedTo="Jane Doe" startDate="2021-10-16" dueDate="2021-10-31" />
+      <Card>
+        <h2>Task 1</h2>
+        <p>Task 1 description</p>
+        <p>Assigned to: John Doe</p>
+        <p>Start date: 2021-01-01</p>
+        <p>Due date: 2021-01-31</p>
+      </Card>
+      <Card>
+        <h2>Task 2</h2>
+        <p>Task 2 description</p>
+        <p>Assigned to: Jane Doe</p>
+        <p>Start date: 2021-02-01</p>
+        <p>Due date: 2021-02-28</p>
+      </Card>
+      <Card>
+        <h2>Task 3</h2>
+        <p>Task 3 description</p>
+        <p>Assigned to: John Doe</p>
+        <p>Start date: 2021-03-01</p>
+        <p>Due date: 2021-03-31</p>
+      </Card>
     </div>
   )
 }
