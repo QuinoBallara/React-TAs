@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Magia.css';
 
 function magicButton() {
 
@@ -6,8 +7,10 @@ function magicButton() {
 
     return (
         <div>
-            <h1 className={visible ? "visible" : "invisible"}>Ahora me ves</h1>
-            <button>Magic Button</button>
+            <h1 className={visible ? "" : "invisible"}>Ahora me ves</h1>
+            <button onClick={() => setVisible(!visible)}>Magic Button</button>
         </div>
     )
 }
+
+export default magicButton;

@@ -1,10 +1,11 @@
 import './App.css'
+import Magia from './Magia/Magia'
 
 function App() {
 
   return (
     <>
-      <p>hello world</p>
+      <Magia />
     </>
   )
 }
