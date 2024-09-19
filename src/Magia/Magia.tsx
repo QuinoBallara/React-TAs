@@ -7,8 +7,8 @@ function magicButton() {
 
     return (
         <div>
-            <h1 className={visible ? "" : "invisible"}>Ahora me ves</h1>
             <button onClick={() => setVisible(!visible)}>Magic Button</button>
+            <h1 className={visible ? "" : "invisible"}>Ahora me ves</h1>
         </div>
     )
 }
