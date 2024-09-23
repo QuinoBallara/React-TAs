@@ -9,11 +9,20 @@ function TaskList() {
         console.log(elem)
     }
 
+    const deleteFromList = (elem: string) => {
+        setTaskList(taskList.filter(task => task !== elem));
+    }
+
     return (
         <div>
             <IngresarValor onInputChange={addToList} />
             <ul>
-                {taskList.map(task => (<li key={task}>{task}</li>))}
+                {taskList.map(task => (
+                    <li key={task}>
+                        {task}
+                        <button onClick={() => deleteFromList(task)}>Eliminar</button>
+                    </li>
+                ))}
             </ul>
         </div>
     )
