@@ -1,11 +1,11 @@
 import './App.css'
-import Magia from './Magia/Magia'
+import TaskList from './TaskList/TaskList'
 
 function App() {
 
   return (
     <>
-      <Magia />
+      <TaskList />
     </>
   )
 }
