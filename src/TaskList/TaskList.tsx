@@ -16,7 +16,10 @@ function TaskList() {
 
     const editFromList = (index: number) => {
         const updatedList = [...taskList];
-        updatedList[index] = "aaa";
+        const newTask = prompt("Ingrese la nueva tarea");
+        if (newTask) {
+            updatedList[index] = newTask;
+        }
         setTaskList(updatedList);
     }
 
