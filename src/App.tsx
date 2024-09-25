@@ -1,10 +1,11 @@
 import './App.css'
+import Timer from './Timer/Timer'
 
 function App() {
 
   return (
     <>
-      <p>hello world</p>
+      <Timer />
     </>
   )
 }
