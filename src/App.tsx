@@ -9,7 +9,6 @@ function App() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(data => setData(data))
-    console.log(data)
   }, [])
 
 
@@ -17,7 +16,7 @@ function App() {
     <div>
       <h1>Users</h1>
       <ul>
-        {data && data.map((user: any) => (
+        {data.map((user: any) => (
           <li key={user.id}><span>{user.name}</span>: {user.email}</li>
         ))}
       </ul>
