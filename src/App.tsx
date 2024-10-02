@@ -1,10 +1,14 @@
 import './App.css'
+import User from './User/User'
+import { UserContext } from './Context/UserContext'
 
 function App() {
 
   return (
     <>
-      <p>hello world</p>
+      <UserContext.Provider value={"pepito"}>
+        <User />
+      </UserContext.Provider>
     </>
   )
 }
