@@ -2,11 +2,11 @@ import { useContext } from "react"
 import { UserContext } from "../Context/UserContext"
 
 const User = () => {
-    const user = useContext<string>(UserContext);
+    const user = useContext(UserContext);
 
     return (
         <div>
-            <h1>{user}</h1>
+            <h1>{user.username}</h1>
         </div>
     )
 }

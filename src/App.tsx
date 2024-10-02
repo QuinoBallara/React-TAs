@@ -1,14 +1,17 @@
 import './App.css'
 import User from './User/User'
-import { UserContext } from './Context/UserContext'
+import Input from './Input/Input'
+import { UserContext, UserProvider } from './Context/UserContext'
+import { useState } from 'react'
 
 function App() {
 
   return (
     <>
-      <UserContext.Provider value={"pepito"}>
+      <UserProvider>
+        <Input />
         <User />
-      </UserContext.Provider>
+      </UserProvider>
     </>
   )
 }
