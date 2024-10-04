@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Contact } from './Contact/Contact.tsx'
 import { Home } from './Home/Home.tsx'
 import { About } from './About/About.tsx'
+import { Product } from './Product/Product.tsx'
 
 function App() {
 
@@ -22,6 +23,10 @@ function App() {
     {
       path: '/home',
       element: <Home />
+    },
+    {
+      path: '/product/:id',
+      element: <Product />
     }
   ]);
 
