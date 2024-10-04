@@ -1,28 +1,49 @@
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { Contact } from './Contact/Contact.tsx'
 import { Home } from './Home/Home.tsx'
 import { About } from './About/About.tsx'
 import { Product } from './Product/Product.tsx'
+import { useState } from 'react'
 
 function App() {
+
+  const [user, setUser] = useState<string>("");
+
+  type ProtectedRouteProps = {
+    user: any;
+    children: any;
+    redirectPath?: string
+  }
+
+  const ProtectedRoute = ({
+    user,
+    children,
+    redirectPath = '/home'
+  }: ProtectedRouteProps) => {
+    if (user !== "admin") {
+      return <Navigate to={redirectPath} replace />
+    }
+    return children
+  }
+
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home />,
+      element: <Home onInputChange={setUser} />,
     },
     {
       path: '/contact',
-      element: <Contact />
+      element: <ProtectedRoute user={user}><Contact /></ProtectedRoute>
     },
     {
       path: '/about',
-      element: <About />
+      element: <ProtectedRoute user={""}><About /></ProtectedRoute>
     },
     {
       path: '/home',
-      element: <Home />
+      element: <Home onInputChange={setUser} />
     },
     {
       path: '/product/:id',
